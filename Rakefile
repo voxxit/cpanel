@@ -13,8 +13,8 @@ begin
 
     gem.add_development_dependency "thoughtbot-shoulda"
 
-    gem.add_dependency "active_resource"
-    gem.add_dependency "active_support"
+    gem.add_dependency "activeresource"
+    gem.add_dependency "activesupport"
   end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
