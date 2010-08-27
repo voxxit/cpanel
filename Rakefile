@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{cPanel connection wrapper for Ruby}
     gem.description = %Q{cPanel connection wrapper for Ruby}
     gem.email = "jdelsman@voxxit.com"
-    gem.homepage = "http://github.com/voxxit/cpanel"
+    gem.homepage = "http://tastyrails.com/"
     gem.authors = ["Josh Delsman"]
 
     gem.add_development_dependency "thoughtbot-shoulda"

@@ -2,6 +2,48 @@
 
 cPanel connection wrapper for Ruby.
 
+== Example Usage
+
+You will first need to build the basic class for the remote server calls you wish to implement. I wrote the plugin to be extremely barebones,
+so you could implement what you deemed necessary to stay lean:
+
+    require 'cpanel'
+
+    class CpanelServer  
+      attr_reader :server
+  
+      def initialize(url, key)    
+        @server = Cpanel::Server.new({
+          :url => url,
+          :key => key
+        })
+      end
+
+      def change_password(user, new_password)
+        server.request("passwd", {
+          :user => user,
+          :pass => new_password
+        })
+      end
+    end
+
+    server = CpanelServer.new("https://server.com:2086", "API_KEY_HERE")
+    server.change_password("myuser12", "s3cur3p@55")
+
+All API calls can be performed using JSON or XML. You can set this in the initialization, if you'd like:
+
+    def initialize(url, key, connection_type = "json")
+      @server = Cpanel::Server.new({
+        :url => url,
+        :key => key,
+        :api => connection_type
+      })
+    end
+
+For a list of current API commands, go here:
+
+http://docs.cpanel.net/twiki/bin/view/AllDocumentation/AutomationIntegration/XmlApi
+
 == Bug/feature requests
 
 Please insert all bug and feature requests into the GitHub Issues tracker:
