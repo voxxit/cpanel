@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cpanel}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Josh Delsman"]
-  s.date = %q{2010-06-25}
+  s.date = %q{2010-08-27}
   s.description = %q{cPanel connection wrapper for Ruby}
   s.email = %q{jdelsman@voxxit.com}
   s.extra_rdoc_files = [
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
      "test/cpanel_test.rb",
      "test/test_helper.rb"
   ]
-  s.homepage = %q{http://github.com/voxxit/cpanel}
+  s.homepage = %q{http://tastyrails.com/}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
