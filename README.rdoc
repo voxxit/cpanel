@@ -12,10 +12,11 @@ so you could implement what you deemed necessary to stay lean:
     class CpanelServer  
       attr_reader :server
   
-      def initialize(url, key)    
+      def initialize(url, key, user = 'root')    
         @server = Cpanel::Server.new({
           :url => url,
-          :key => key
+          :key => key,
+          :user => user
         })
       end
 
