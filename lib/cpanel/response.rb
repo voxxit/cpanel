@@ -3,6 +3,7 @@ require 'active_support/json'
 module Cpanel
   class Response
     attr_accessor :response, :success
+    alias :data :response
 
     def initialize(response)      
       response = ActiveSupport::JSON.decode(response)
@@ -15,7 +16,7 @@ module Cpanel
       
       @success = success?
     end
-    
+
     def errors
       if success?
         nil
