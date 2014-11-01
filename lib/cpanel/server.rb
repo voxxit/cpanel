@@ -7,11 +7,12 @@ module Cpanel
   class Server
     include ActiveResource
     
-    attr_accessor :url, :key, :timeout, :api
+    attr_accessor :url, :key, :timeout, :api, :user
     
     def initialize(options = {})
       @url = URI.parse(options[:url])
       @key = format_key(options[:key])
+      @user = options[:user] || "root"
       @timeout = options[:timeout] || 300
       @api = options[:api] || "json"
     end
@@ -22,7 +23,7 @@ module Cpanel
     
     def request(script, options = {})
       request = Net::HTTP::Get.new("/#{api}-api/" + script)
-      request.add_field "Authorization", "WHM root:#{key}"
+      request.add_field "Authorization", "WHM #{user}:#{key}"
       request.set_form_data(options) unless options.empty?
       
       result = http.request(request)
