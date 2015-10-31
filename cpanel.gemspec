@@ -8,28 +8,31 @@ Gem::Specification.new do |s|
   s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Josh Delsman"]
+  s.authors = ["Joshua Delsman"]
   s.date = %q{2010-08-27}
   s.description = %q{cPanel connection wrapper for Ruby}
-  s.email = %q{jdelsman@voxxit.com}
+  s.email = %q{j@srv.im}
+  
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+    "README.rdoc"
   ]
+  
   s.files = [
     ".document",
-     ".gitignore",
-     "LICENSE",
-     "README.rdoc",
-     "Rakefile",
-     "VERSION",
-     "cpanel.gemspec",
-     "lib/cpanel.rb",
-     "lib/cpanel/response.rb",
-     "lib/cpanel/server.rb",
-     "test/cpanel_test.rb",
-     "test/test_helper.rb"
+    ".gitignore",
+    "LICENSE",
+    "README.rdoc",
+    "Rakefile",
+    "VERSION",
+    "cpanel.gemspec",
+    "lib/cpanel.rb",
+    "lib/cpanel/response.rb",
+    "lib/cpanel/server.rb",
+    "test/cpanel_test.rb",
+    "test/test_helper.rb"
   ]
+  
   s.homepage = %q{http://tastyrails.com/}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
@@ -37,7 +40,7 @@ Gem::Specification.new do |s|
   s.summary = %q{cPanel connection wrapper for Ruby}
   s.test_files = [
     "test/cpanel_test.rb",
-     "test/test_helper.rb"
+    "test/test_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
@@ -59,4 +62,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<activesupport>, [">= 0"])
   end
 end
-
