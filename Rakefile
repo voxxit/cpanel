@@ -7,9 +7,9 @@ begin
     gem.name = "cpanel"
     gem.summary = %Q{cPanel connection wrapper for Ruby}
     gem.description = %Q{cPanel connection wrapper for Ruby}
-    gem.email = "jdelsman@voxxit.com"
+    gem.email = "j@srv.im"
     gem.homepage = "http://tastyrails.com/"
-    gem.authors = ["Josh Delsman"]
+    gem.authors = ["Joshua Delsman"]
 
     gem.add_development_dependency "shoulda"
     gem.add_development_dependency "mocha"
